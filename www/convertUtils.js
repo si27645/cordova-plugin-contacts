@@ -41,7 +41,7 @@ module.exports = {
             } catch (exception){
               console.log("Cordova Contact toCordovaFormat error: exception creating date.");
             }
-               contact.birthday =  new Date(0);
+            
         }
         return contact;
     },
