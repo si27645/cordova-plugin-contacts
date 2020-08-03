@@ -29,8 +29,8 @@ module.exports = {
     toCordovaFormat: function (contact) {
         var value = contact.birthday;
         if (value !== null) {
-          /*  try {
-              contact.birthday = new Date(parseFloat(value));
+            try {
+              contact.birthday = (new Date(parseFloat(value))).format('yyyy-mm-ddThh:mm:ss');
               
               //we might get 'Invalid Date' which does not throw an error
               //and is an instance of Date.
@@ -40,7 +40,7 @@ module.exports = {
 
             } catch (exception){
               console.log("Cordova Contact toCordovaFormat error: exception creating date.");
-            }*/
+            }
                contact.birthday =  new Date(0);
         }
         return contact;
